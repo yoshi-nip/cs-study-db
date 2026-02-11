@@ -1,0 +1,17 @@
+[
+  {
+    "id": "intro-01",
+    "chapter": "第0章 イントロ",
+    "title": "学習ゴール",
+    "bullets": ["なぜ値が見える/見えないかを説明できる", "Read View / MVCC / ロックのつながりを理解する", "SQLの種類で読まれるバージョンが変わることを掴む"],
+    "glossaryTerms": ["Read View", "MVCC"]
+  },
+  {
+    "id": "readview-01",
+    "chapter": "第2章 Read View",
+    "title": "Read Viewはいつ作られる？",
+    "bullets": ["RRでは最初のconsistent readで作成される", "SELECTはスナップショット、UPDATEは最新を読む", "Read Viewはトランザクション終了まで固定される"],
+    "code": "BEGIN;\nSELECT * FROM users;\nUPDATE users SET age = 30 WHERE id = 1;",
+    "glossaryTerms": ["consistent read", "current read", "REPEATABLE READ"]
+  }
+]

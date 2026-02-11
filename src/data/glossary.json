@@ -1,0 +1,32 @@
+[
+  {
+    "term": "MVCC",
+    "short": "複数のバージョンを持って読み取りを成立させる仕組み",
+    "long": "MVCC（Multi-Version Concurrency Control）は、同じ行に複数のバージョンを保持し、トランザクションごとに見えるバージョンを切り替える仕組みです。読み取りと書き込みを競合させにくくします。",
+    "related": ["Read View", "Undoログ"]
+  },
+  {
+    "term": "Read View",
+    "short": "このトランザクションが見てよい範囲のスナップショット",
+    "long": "Read Viewは、トランザクションが参照してよい行バージョンの集合を表す情報です。RRでは最初のconsistent readで作られ、終了まで固定されます。",
+    "related": ["REPEATABLE READ", "consistent read"]
+  },
+  {
+    "term": "consistent read",
+    "short": "ロックを取らずにスナップショットを読む読み取り",
+    "long": "consistent readは、Read Viewに基づいて過去のバージョンを読む読み取りです。通常のSELECTが該当します。",
+    "related": ["Read View", "current read"]
+  },
+  {
+    "term": "current read",
+    "short": "最新バージョンをロック付きで読む読み取り",
+    "long": "current readは、最新の行を読んでロックを取得します。UPDATE/DELETE/SELECT FOR UPDATEなどが該当します。",
+    "related": ["consistent read", "ロック"]
+  },
+  {
+    "term": "REPEATABLE READ",
+    "short": "最初のRead Viewを固定する分離レベル",
+    "long": "REPEATABLE READは、トランザクション中に同じSELECT結果が繰り返し得られるようRead Viewを固定します。",
+    "related": ["Read View", "READ COMMITTED"]
+  }
+]

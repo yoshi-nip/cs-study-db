@@ -1,6 +1,10 @@
 import { Paper, Stack, Typography } from '@mui/material'
+import slides from '../../data/slides.json'
+import type { SlideContent } from '../../types/content'
 
 const SlideCanvas = () => {
+  const slide = slides[0] as SlideContent
+
   return (
     <Paper
       elevation={0}
@@ -13,12 +17,16 @@ const SlideCanvas = () => {
     >
       <Stack spacing={2}>
         <Typography variant="overline" color="text.secondary">
-          スライド（仮）
+          {slide.chapter}
         </Typography>
-        <Typography variant="h4">Read Viewはいつ作られる？</Typography>
-        <Typography variant="body1" color="text.secondary">
-          RRでは最初のconsistent readでRead Viewが作られ、トランザクション終了まで固定されます。
-        </Typography>
+        <Typography variant="h4">{slide.title}</Typography>
+        <Stack spacing={1}>
+          {slide.bullets.map((bullet) => (
+            <Typography key={bullet} variant="body1" color="text.secondary">
+              ・{bullet}
+            </Typography>
+          ))}
+        </Stack>
       </Stack>
     </Paper>
   )
