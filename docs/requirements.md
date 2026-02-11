@@ -25,10 +25,13 @@ URL内のDB学習内容を、ジュニアエンジニアにも理解できるよ
 
 ## 想定ページ構成（例）
 - イントロ（学習ゴール）
+- SQL/トランザクションの超基礎
 - Read View の生成タイミング
 - 自己可視性（自分の更新が見える理由）
 - MVCCの内部イメージ（Undo参照）
+- current read / consistent read
 - RR と RC の比較
+- Undo/Redo/WAL/チェックポイント
 - 用語集（MVCC / Read View / Undo/Redo / WAL / ギャップロック など）
 
 ## 保留/確認事項
