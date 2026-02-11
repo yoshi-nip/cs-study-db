@@ -8,6 +8,7 @@ const AppLayout = () => {
   return (
     <Box sx={{ minHeight: '100vh', bgcolor: 'background.default' }}>
       <AppHeader />
+      {/* 大枠は3カラム構成。左右は補助情報、中央がメイン表示 */}
       <Box
         component="main"
         sx={{

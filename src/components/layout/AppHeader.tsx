@@ -1,5 +1,7 @@
 import { AppBar, Toolbar, Typography } from '@mui/material'
 
+// AppBar/ToolbarはHTMLのheader + nav領域のような役割（上部の枠と中身の整列）
+
 const AppHeader = () => {
   return (
     <AppBar position="static" color="default" elevation={0}>

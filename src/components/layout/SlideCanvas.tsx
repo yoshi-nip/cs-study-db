@@ -1,8 +1,11 @@
 import { Paper, Stack, Typography } from '@mui/material'
+
+// StackはHTMLのdivを縦に積むコンテナ、Typographyは見出し/本文の役割
 import slides from '../../data/slides.json'
 import type { SlideContent } from '../../types/content'
 
 const SlideCanvas = () => {
+  // JSONの配列をSlideContentとして扱うことで、型に沿った参照ができるようにする
   const slide = slides[0] as SlideContent
 
   return (

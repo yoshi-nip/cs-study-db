@@ -1,5 +1,7 @@
 import { Paper, Stack, Typography } from '@mui/material'
 
+// TypographyはHTMLのh1/p相当（見出しと本文の役割分担）
+
 const GlossaryPanel = () => {
   return (
     <Paper

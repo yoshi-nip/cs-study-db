@@ -1,5 +1,8 @@
 import { Paper, Stack, Typography } from '@mui/material'
 
+// PaperはHTMLのsection/divの「カード面」的な役割
+// StackはHTMLのdivを縦並びにしてgapで余白を作るイメージ
+
 const ChapterSidebar = () => {
   return (
     <Paper
